@@ -1,0 +1,247 @@
+/* Layout */
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Auth page */
+.auth-page {
+  max-width: 400px;
+  margin: 4rem auto;
+}
+
+.auth-page h1 {
+  margin-bottom: 1rem;
+}
+
+/* Forms (shared) */
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  margin-top: 0.35rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form label.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+form label.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+form button {
+  margin-top: 1.25rem;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #3b6ef5;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+form button:hover { opacity: 0.92; }
+
+button.link {
+  background: none;
+  color: #3b6ef5;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.switch {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/*  Message banner */
+.message {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.message.error {
+  background: #ffe0e0;
+  color: #900;
+}
+
+/*Journal layout */
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.journal-header h1 {
+  margin: 0;
+}
+.journal-header button {
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: #d33;
+  color: white;
+  cursor: pointer;
+}
+
+.journal-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 720px) {
+  .journal-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Entry list (left)*/
+.entry-list {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fff;
+  height: fit-content;
+}
+.entry-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.entry-list-header h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+.entry-list-header button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  background: #3b6ef5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.entry-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.entry-list li {
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+.entry-list li:hover {
+  background: #f0f4ff;
+}
+.entry-list li.selected {
+  background: #e6ecff;
+}
+
+.entry-id {
+  color: #888;
+  font-size: 0.8rem;
+  font-family: ui-monospace, Consolas, monospace;
+}
+.entry-title {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.entry-date {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/*Entry detail (right)*/
+.entry-detail {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: #fff;
+  min-height: 300px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.detail-header h2 {
+  margin: 0 0 0.15rem;
+}
+.detail-header small {
+  color: #888;
+}
+.detail-header button {
+  margin-left: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background: #3b6ef5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.detail-header button.danger {
+  background: #d33;
+}
+
+.entry-body {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.editor-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.editor-actions button {
+  margin-top: 0;
+}
+.editor-actions button[type="button"] {
+  background: #e5e5e5;
+  color: #333;
+}
+
+/*Misc*/
+.muted {
+  color: #888;
+}
+.empty-state {
+  text-align: center;
+  padding-top: 4rem;
+}
